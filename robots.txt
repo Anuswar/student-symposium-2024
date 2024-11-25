@@ -1,0 +1,15 @@
+# Allow all bots to crawl everything (except restricted directories)
+User-agent: *
+Disallow: /admin/
+Disallow: /private/
+Disallow: /cgi-bin/
+
+# Allow search engines to crawl important files
+Allow: /public/
+
+# Block a specific bot from crawling
+User-agent: BadBot
+Disallow: /
+
+# Sitemap for better indexing
+Sitemap: https://sode-edu.in/student_symposium/sitemap.xml

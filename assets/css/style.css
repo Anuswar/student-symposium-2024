@@ -376,12 +376,23 @@ body {
   left: 0;
   width: 100%;
   z-index: 100;
-  padding: 10px;
+  padding: 10px 15px;
   -webkit-transition: -webkit-transform 0.3s ease-out;
   transition: -webkit-transform 0.3s ease-out;
   -o-transition: transform 0.3s ease-out;
   transition: transform 0.3s ease-out;
   transition: transform 0.3s ease-out, -webkit-transform 0.3s ease-out;
+}
+
+.header-container {
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+}
+
+.header-container .main-logo {
+  max-width: 100%;
+  height: auto;
+  width: 150px; 
 }
 
 .header.hide {
@@ -394,9 +405,12 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   padding: 10px 0;
   border-bottom: 1px solid rgba(256, 256, 256, 0.1);
 }
@@ -450,6 +464,8 @@ body {
   -webkit-column-gap: 1rem;
   -moz-column-gap: 1rem;
   column-gap: 1rem;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
 }
 
 .nav-icons .bx-search-alt-2 {
@@ -463,7 +479,7 @@ body {
 }
 
 .nav-icons .menuBtn {
-  font-size: 30px;
+  font-size: 24px;
   place-items: center;
   color: #ffffff;
   padding: 2px;
@@ -558,6 +574,60 @@ a.movie-item:hover {
 
   .icon2 {
     display: block;
+  }
+}
+
+.navbar-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  margin-left: auto;
+  gap: 15px; 
+}
+
+.nav-item {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+/* Responsive Adjustments */
+@media (min-width: 1200px) {
+  .header-container .main-logo {
+    width: 250px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  .header-container .main-logo {
+    width: 300px; 
+  }
+}
+
+@media (max-width: 767px) {
+  .header-container .main-logo {
+    width: 200px;
+  }
+
+  .icon2 .menuBtn {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 991px) {
+  .navbar-nav {
+    display: none; 
+  }
+
+  .nav-icons {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
 }
 
@@ -966,28 +1036,6 @@ a.movie-item:hover {
 }
 
 /*=============== SLIDESHOW BANNER ===============*/
-.mySwiper {
-  width: 100%;
-  height: 100vh;
-  position: relative;
-}
-
-.slider-blank {
-  background-size: cover;
-  background-position: center;
-}
-
-.slider-blank::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(9, 30, 62, 0.7);
-  z-index: 1;
-}
-
 .carousel-caption {
   position: absolute;
   top: 0;
@@ -1008,42 +1056,11 @@ a.movie-item:hover {
   z-index: 2;
 }
 
-.carousel-caption .p-3 {
-  max-width: 900px;
-  text-align: center;
-}
-
 .carousel-caption h4,
 .carousel-caption h1,
 .carousel-caption h2,
 .carousel-caption a {
   color: white;
-}
-
-.carousel-caption a.btn-outline-light {
-  color: white;
-  border-color: white;
-}
-
-.carousel-caption a.btn-outline-light:hover {
-  color: #000;
-  background-color: white;
-}
-
-@media (max-width: 576px) {
-  .carousel-caption h4 {
-    font-size: 14px;
-    font-weight: 500 !important;
-  }
-  .carousel-caption h1 {
-    font-size: 30px;
-    font-weight: 600 !important;
-  }
-}
-
-.swiper-button-next,
-.swiper-button-prev {
-  color: #fff;
 }
 
 .slider-banner {
@@ -1056,39 +1073,61 @@ a.movie-item:hover {
   overflow: hidden;
 }
 
-.slider-banner .swiper {
-  width: 100%;
-  height: auto;
-}
-
-.slider-banner .swiper-slide {
-  background-position: center;
-  background-size: cover;
-}
-
-.slider-banner .swiper-slide img {
-  display: block;
-  width: 100%;
-  height: 600px;
-}
-
-.slider-banner .swiper-slide {
+.carousel-inner {
   position: relative;
 }
 
-.slider-banner .swiper-slide::before {
+.carousel-item img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 100vh; 
+}
+
+.carousel-caption {
+  position: absolute;
+  bottom: 30px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  color: white;
+}
+
+/* Optional custom CSS for the carousel to fit your design */
+.carousel-inner {
+  position: relative;
+}
+
+.carousel-item {
+  position: relative;
+}
+
+.carousel-item img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 100vh; 
+}
+
+/* Overlay effect on carousel items */
+.slider-blank::after {
   content: "";
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  height: 600px;
-  background: rgba(9, 30, 62, 0.2);
-  opacity: 1;
-  -webkit-transition: opacity 0.3s ease;
-  -o-transition: opacity 0.3s ease;
-  transition: opacity 0.3s ease;
+  height: 100%;
+  background: rgba(9, 30, 62, 0.7);
+  z-index: 1;
 }
+
+.carousel-caption {
+  position: absolute;
+  bottom: 30px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  color: white;
+}
+
 
 /*=============== SERVICE ===============*/
 .service-item {
@@ -1628,97 +1667,4 @@ ul.b {
 }
 .service-icon .fa-leaf {
   color: #28a745;
-}
-
-/* =============== NEW HEADER =============== */
-.header {
-  padding: 10px 15px;
-}
-
-.header-container {
-  -ms-flex-negative: 0;
-      flex-shrink: 0;
-}
-
-.header-container .main-logo {
-  max-width: 100%;
-  height: auto;
-  width: 150px; 
-}
-
-/* Navbar Styles */
-.nav {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-.navbar-nav {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  margin-left: auto;
-  gap: 15px; 
-}
-
-.nav-item {
-  font-size: 16px;
-  font-weight: 500;
-}
-
-.nav-icons {
-  -ms-flex-negative: 0;
-      flex-shrink: 0;
-}
-
-.icon2 .menuBtn {
-  font-size: 24px;
-  cursor: pointer;
-}
-
-/* Responsive Adjustments */
-@media (min-width: 1200px) {
-  .header-container .main-logo {
-    width: 250px;
-  }
-}
-
-@media (min-width: 768px) and (max-width: 1199px) {
-  .header-container .main-logo {
-    width: 300px; 
-  }
-}
-
-@media (max-width: 767px) {
-  .header-container .main-logo {
-    width: 200px;
-  }
-
-  .icon2 .menuBtn {
-    font-size: 20px;
-  }
-}
-
-@media (max-width: 991px) {
-  .navbar-nav {
-    display: none; 
-  }
-
-  .nav-icons {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
 }

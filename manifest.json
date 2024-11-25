@@ -1,0 +1,15 @@
+{
+  "name": "STUDENT SYMPOSIUM Conference",
+  "short_name": "STUDENT SYMPOSIUM",
+  "start_url": "/",
+  "display": "standalone",
+  "theme_color": "#06A3DA",
+  "background_color": "#ffffff",
+  "icons": [
+    {
+      "src": "assets/images/logo/smvitm-logo.png",
+      "sizes": "72x71",
+      "type": "image/png"
+    }
+  ]
+}
