@@ -190,7 +190,11 @@
     <script defer src="https://unpkg.com/scrollreveal"></script>
     <script defer src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
 
+    <script  src="https://cdn.jsdelivr.net/npm/@wessberg/aspect-ratio@latest/dist/aspect-ratio.min.js"></script>
+
+
     <script defer src="js/script.js"></script>
+    
   </head>
 
   <body>
@@ -422,16 +426,24 @@
       <div class="carousel-caption">
 
         <div style="margin-top: 80px;" class="p-33">
-          
           <h4 class="text-uppercase mb-3">
             Computational Intelligence and Smart Communication
           </h4>
+          
           <h1 class="display-1 mb-md-4">STUDENT SYMPOSIUM</h1>
-          <h2 class="mb-3">20th and 21st December 2024</h2>
-          <a id="submissionguidelines" href="#submission-guidelines" class="btn btn-primary py-md-3 px-md-5 me-3" style="border-radius: 30px;">Submission Guidelines</a>
 
-          <a id="registrationn" href="#registration"  class="btn btn-outline-light py-md-3 px-md-5" style="border-radius: 30px;">Registration</a>
-        </div>
+          <h5 class="text-uppercase mb-3 text-primary">
+            As Part of International Conference 
+            <a href="https://sode-edu.in/cisc/" target="_blank" class="conference-link text-primary">CISC</a> &
+            <a href="https://sode-edu.in/meems/" target="_blank" class="conference-link text-primary">MEEMS</a>
+          </h5>
+          
+          <h2 class="mb-3">20th and 21st December 2024</h2>
+          
+          <a id="submissionguidelines" href="#submission-guidelines" class="btn btn-primary py-md-3 px-md-5 me-3" style="border-radius: 30px;">Submission Guidelines</a>
+          
+          <a id="registrationn" href="#registration" class="btn btn-outline-light py-md-3 px-md-5" style="border-radius: 30px;">Registration</a>
+        </div>                   
       </div>
     </section>     
 
@@ -722,7 +734,16 @@
               </div>
             </div>
           </div>          
-        </div>       
+        </div>    
+        
+        <div class="form-container">
+          <iframe id="googleForm" 
+                  src="https://docs.google.com/forms/d/e/1FAIpQLSfP73Str_9o0utpXO_W_1XVN1oREvTE-FyfDd3vNttAjBhCAw/viewform?embedded=true" 
+                  frameborder="0" 
+                  marginheight="0" 
+                  marginwidth="0">Loading…</iframe>
+        </div>
+
       </div>
     </section>    
 
@@ -919,6 +940,16 @@
                     <i class="fa fa-arrow-right text-primary me-2"></i>
                     Contact Us
                   </a>
+
+                  <a class="text-light" href="https://sode-edu.in/cisc/">
+                    <i class="fa fa-arrow-right text-primary me-2"></i>
+                    CISC-2024
+                  </a>
+
+                  <a class="text-light" href="https://sode-edu.in/meems/">
+                    <i class="fa fa-arrow-right text-primary me-2"></i>
+                    MEEMS-2024
+                  </a>
                 </div>
               </div>
 
@@ -941,7 +972,7 @@
 
                   <a class="text-light mb-2" target="_blank" href="pages/sitemap.html">
                     <i class="fa fa-arrow-right text-primary me-2"></i>
-                    Sitemap
+                    Sitemap 
                   </a>
                 </div>
               </div>
@@ -972,5 +1003,30 @@
     <a href="#" id="scroll-up" class="btn btn-primary rounded-pill scrollup">
       <i class="fa fa-arrow-up"></i>
     </a>
+
+    <script>
+      function adjustIframeSize() {
+        const iframe = document.getElementById('googleForm');
+        const screenWidth = window.innerWidth;
+  
+        // Adjust iframe dimensions based on screen size
+        if (screenWidth < 576) {
+          iframe.style.width = '100vh';
+          iframe.style.height = '700px';
+        } else if (screenWidth < 768) {
+          iframe.style.width = '600px';
+          iframe.style.height = '700px';
+        } else {
+          iframe.style.width = '800px';
+          iframe.style.height = '700px';
+        }
+      }
+  
+      // Initial adjustment on page load
+      adjustIframeSize();
+  
+      // Add an event listener to adjust iframe size on window resize
+      window.addEventListener('resize', adjustIframeSize);
+    </script>
   </body>
 </html>

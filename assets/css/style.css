@@ -961,6 +961,14 @@ a.movie-item:hover {
   color: white;
 }
 
+.conference-link {
+  font-weight: bold;
+}
+
+.conference-link:hover {
+  text-decoration: underline;
+}
+
 /*=============== SERVICE ===============*/
 .service-item {
   position: relative;
@@ -1432,3 +1440,9 @@ ul.b {
 }
 
 
+.form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
