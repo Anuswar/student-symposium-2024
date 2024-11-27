@@ -802,183 +802,12 @@ a.movie-item:hover {
   -ms-transform: rotate(180deg);
   transform: rotate(180deg);
 }
-:root {
-  --primary-color: #06a3da;
-  --secondary-color: #000;
-  --background-color: white;
-  --box-shadow-color: rgba(22, 8, 43, 0.1);
-  --font-size-small: 16px;
-  --font-size-large: 1.2rem;
-  --letter-spacing: 0.1rem;
-  --transition-duration: 0.3s;
-}
 
 .menu {
   position: fixed;
   top: 0;
-  left: -230px;
-  width: 230px;
-  height: 100vh;
-  padding: 1rem 1rem 0;
-  background-color: var(--background-color);
-  -webkit-box-shadow: 1px 0 0 var(--box-shadow-color);
-          box-shadow: 1px 0 0 var(--box-shadow-color);
-  -webkit-transition: left var(--transition-duration) ease;
-  -o-transition: left var(--transition-duration) ease;
-  transition: left var(--transition-duration) ease;
-  z-index: 200;
-}
-
-.nav-link.active {
-  color: var(--primary-color);
-  font-weight: bold;
-}
-
-.menu.open {
-  left: 0;
-}
-
-.overlay {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.7);
-  z-index: 10;
-}
-
-.overlay.open {
-  display: block;
-}
-
-.nav-container {
-  height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  padding-bottom: 3rem;
-  overflow: auto;
-  scrollbar-width: none;
-  color: var(--secondary-color);
-}
-
-.nav-container::-webkit-scrollbar {
-  display: none;
-}
-
-.nav-menu {
-  font-weight: 100;
-  margin-bottom: 2.5rem;
-}
-
-.nav-list,
-.nav-items {
-  display: -ms-grid;
-  display: grid;
-}
-
-.nav-list {
-  row-gap: 2.5rem;
-}
-
-.nav-items {
-  row-gap: 1.5rem;
-}
-
-.nav-subtitle {
-  font-size: var(--font-size-small);
-  text-transform: uppercase;
-  letter-spacing: var(--letter-spacing);
-}
-
-.nav-link {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  color: var(--secondary-color);
-}
-
-.nav-link:hover {
-  color: var(--primary-color);
-}
-
-.nav-icon {
-  font-size: var(--font-size-large);
-  margin-right: 0.5rem;
-}
-
-.nav-name {
-  font-size: var(--font-size-small);
-  font-weight: 500;
-  white-space: nowrap;
-}
-
-.nav-logout {
-  margin-top: 5rem;
-}
-
-.nav-dropdown {
-  overflow: hidden;
-  max-height: 21px;
-  -webkit-transition: 0.4s ease-in-out;
-  -o-transition: 0.4s ease-in-out;
-  transition: 0.4s ease-in-out;
-}
-
-.nav-dropdown-collapse {
-  background-color: var(--background-color);
-  border-radius: 0.25rem;
-  margin-top: 1rem;
-}
-
-.nav-dropdown-content {
-  display: -ms-grid;
-  display: grid;
-  row-gap: 0.5rem;
-  padding: 0.75rem 2.5rem 0.75rem 1.8rem;
-}
-
-.nav-dropdown-item {
-  font-size: var(--font-size-small);
-  font-weight: 400;
-  color: var(--secondary-color);
-}
-
-.nav-dropdown-item:hover {
-  color: var(--secondary-color);
-}
-
-.nav-dropdown-icon {
-  margin-left: auto;
-  -webkit-transition: 0.4s;
-  -o-transition: 0.4s;
-  transition: 0.4s;
-}
-
-.nav-dropdown:hover {
-  max-height: 100rem;
-}
-
-.nav-dropdown:hover .nav-dropdown-icon {
-  -webkit-transform: rotate(180deg);
-      -ms-transform: rotate(180deg);
-          transform: rotate(180deg);
-}
-
-.menu {
-  position: fixed;
-  top: 0;
-  left: -250px;
-  width: 250px;
+  left: -300px;
+  width: 300px;
   height: 100vh;
   padding: 1rem;
   background-color: white;
@@ -1004,7 +833,7 @@ a.movie-item:hover {
   padding: 0.75rem 1rem;
   width: 100%;
   color: #000;
-  border-radius: 4px;
+  border-radius: 10px;
   -webkit-transition: background-color 0.3s ease, color 0.3s ease;
   -o-transition: background-color 0.3s ease, color 0.3s ease;
   transition: background-color 0.3s ease, color 0.3s ease;
@@ -1035,7 +864,17 @@ a.movie-item:hover {
   margin-bottom: 1rem;
 }
 
-/*=============== SLIDESHOW BANNER ===============*/
+.menuBtn {
+  font-size: 24px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.menuBtn:hover {
+  transform: scale(1.1);
+}
+
+/*=============== BANNER ===============*/
 .carousel-caption {
   position: absolute;
   top: 0;
@@ -1080,7 +919,7 @@ a.movie-item:hover {
 .carousel-item img {
   -o-object-fit: cover;
      object-fit: cover;
-  height: 100vh; 
+  height: 85vh; 
 }
 
 .carousel-caption {
@@ -1099,12 +938,6 @@ a.movie-item:hover {
 
 .carousel-item {
   position: relative;
-}
-
-.carousel-item img {
-  -o-object-fit: cover;
-     object-fit: cover;
-  height: 100vh; 
 }
 
 /* Overlay effect on carousel items */
@@ -1127,7 +960,6 @@ a.movie-item:hover {
   text-align: center;
   color: white;
 }
-
 
 /*=============== SERVICE ===============*/
 .service-item {
@@ -1533,76 +1365,6 @@ ul.b {
   }
 }
 
-/* =============== KEY SPEAKERS =============== */
-.custom-swiper {
-  width: 100%;
-  padding: 20px 0;
-}
-
-.custom-swiper-slide {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.testimonial-item {
-  background-color: #eef9ff !important;
-  border: 1px solid #ccc;
-  padding: 10px;
-  border-radius: 10px;
-  width: 300px;
-}
-
-.testimonial-item img {
-  width: 80px;
-  height: 80px;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
-.custom-swiper .swiper-pagination {
-  margin-top: 15px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: end;
-  -ms-flex-align: end;
-  align-items: flex-end;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-}
-
-.swiper-button-next:after,
-.swiper-button-prev:after {
-  position: absolute;
-  outline: none;
-  border: none;
-  height: 50px;
-  width: 50px;
-  z-index: 5;
-  color: #fff;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  cursor: pointer;
-  font-size: 1.5rem;
-  background: #000;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  border-radius: 50%;
-}
-
 /* =============== BACK TO TOP =============== */
 .scrollup {
   position: fixed;
@@ -1668,3 +1430,5 @@ ul.b {
 .service-icon .fa-leaf {
   color: #28a745;
 }
+
+
