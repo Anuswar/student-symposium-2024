@@ -1,8 +1,8 @@
-![CISC-2024 Website Preview](https://raw.githubusercontent.com/Anuswar/meems-2024/main/assets/images/preview.png)
+![student-symposium Website Preview](https://raw.githubusercontent.com/Anuswar/student-symposium/main/assets/images/preview.png)
 
-# 🎓MEEMS-2024 Website
+# 🎓STUDENT SYMPOSIUM Website
 
-Welcome to the GitHub repository for the MEEMS-2024 Conference website! This repository contains the source code for the website that provides information about the first annual International Conference on Computational Intelligence and Smart Communication (MEEMS-2024) organized by Shri Madhwa Vadiraja Institute of Technology and Management (SMVITM), Bantakal, Udupi, Karnataka, India.
+Welcome to the GitHub repository for the STUDENT SYMPOSIUM Conference website! This repository contains the source code for the website that provides information about the first annual International Conference on Computational Intelligence and Smart Communication (STUDENT SYMPOSIUM) organized by Shri Madhwa Vadiraja Institute of Technology and Management (SMVITM), Bantakal, Udupi, Karnataka, India.
 
 ## ⚙️ Installation
 
@@ -10,8 +10,8 @@ To run this website locally or contribute to its development, follow these steps
 
 1. **Clone the repository:**
     ```bash
-    git clone https://github.com/Anuswar/meems-2024.git
-    cd meems-2024
+    git clone https://github.com/Anuswar/student-symposium-2024.git
+    cd student-symposium-2024
     ```
 
 2. **Open your browser** and navigate to `http://localhost:8000`.
