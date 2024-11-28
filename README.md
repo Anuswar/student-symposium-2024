@@ -1,4 +1,4 @@
-![student-symposium Website Preview](https://raw.githubusercontent.com/Anuswar/student-symposium/main/assets/images/preview.png)
+![student-symposium Website Preview](https://raw.githubusercontent.com/Anuswar/student-symposium-2024/main/assets/images/preview.png)
 
 # 🎓STUDENT SYMPOSIUM Website
 
